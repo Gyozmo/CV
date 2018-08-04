@@ -1,0 +1,124 @@
+
+*, html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Playfair Display', serif;
+}
+
+/* HEADER */
+.navbar {
+  /* position: fixed; */
+
+  /* background-color: rgba(203,134,15,0.20) !important; */
+/* background-color: rgba(203,134,15,0.20) !important; */
+background-color: #BF6600 !important;
+box-shadow: 1px 1px 5px black;
+}
+
+.navbar-brand {
+  color: black!important;
+  text-shadow: 0 0 1px #F2AE27, 0 0 3px #F2AE27;
+  font-size: 2vw;
+}
+
+li a {
+  color: black !important;
+  text-shadow: 0 0 1px #F2AE27, 0 0 3px #F2AE27;
+  font-size: 1.5vw;
+}
+
+
+.navbar-toggler {
+  background-color: rgba(242,174,39,0.20)!important;
+}
+
+
+/* VIDEO BG */
+.fullscreen-video-wrap {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.header-overlay {
+  width: 100%;
+  height: 100vh;
+  z-index: 4;
+  position: absolute;
+  background-color: rgba(196, 129, 0, 0.05);
+  top: 0;
+  left: 0;
+}
+
+.header-content {
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: black !important;
+  text-shadow: 1px 0 0px #F2AE27, 1px 0 3px #F2AE27;
+  overflow: hidden;
+
+}
+.header-content h4{
+  padding: 0.5%;
+  font-size: 3vw;
+}
+
+.header-content h5 {
+  font-size: 2vw;
+}
+
+
+.header-content a {
+  align-self: center;
+  /* background-color: #CB860F; */
+  font-size: 3vw;
+  color: black !important;
+  text-shadow: 0 0 1px #F2AE27, 0 0 1px #F2AE27;
+  /* font-size: 1.5vw; */
+  border-radius: 50%;
+  position: relative;
+  top: 30%;
+
+}
+
+
+@media screen and (max-width: 600px) {
+  li a {
+    font-size: 23px;
+  }
+  .navbar-brand {
+    font-size: 23px;
+  }
+  .header-content a{
+    font-size: 2vw;
+  }
+  .header-content h4{
+    padding: 0.5%;
+    font-size: 4vw;
+  }
+
+  .header-content h5 {
+    font-size: 4vw;
+  }
+}
+
+/* SECTIONS */
+section {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+section h1, section h2, section h5 {
+  padding: 1%;
+}
