@@ -1,50 +1,72 @@
-* {
-  box-sizing: border-box;
-}
-body, html,section {
+
+*, html, body {
   margin: 0;
+  padding: 0;
   overflow-x: hidden;
-  width: 100%;
 }
 
-.video-header {
-height: 100vh;
-display: flex;
-align-items: center;
-color: blue;
+/* HEADER */
+.navbar {
+  /* position: fixed; */
+
+  /* background-color: rgba(203,134,15,0.20) !important; */
+background-color: rgba(203,134,15,0.20) !important;
 }
 
-.wrap {
-  max-width: 960px;
-  padding: 0rem 2rem;
-  margin: auto;
-  text-align: center;
+.navbar-brand {
+  color: black!important;
+  text-shadow: 0 0 1px #F2AE27, 0 0 1px #F2AE27;
 }
 
+li a {
+  color: black !important;
+  text-shadow: 0 0 3px #F2AE27, 0 0 5px #F2AE27;
+}
+
+.navbar-toggler {
+  background-color: rgba(242,174,39,0.20)!important;
+}
+
+/* VIDEO BG */
 .fullscreen-video-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-}
-
-.fullscreen-video-wrap video {
-  min-width: 100%;
-  min-height: 100%;
-}
-
-.header-overlay{
   height: 100vh;
   width: 100vw;
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.30;
+  overflow: hidden;
 }
 
 .header-content {
-  z-index: 2;
-  margin-top: 20%;
-  padding: 0 5rem;
+  width: 100%;
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.header-content h4{
+  padding: 0.5%;
+}
+.header-content a {
+  width: 20%;
+  align-self: center;
+  background-color: #CB860F;
+  font-size: 23px;
+  color: white;
+}
+
+
+
+/* SECTIONS */
+section {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+section h1, section h2, section h5 {
+  padding: 1%;
 }
