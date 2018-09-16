@@ -11,19 +11,21 @@
   /* position: fixed; */
 
   /* background-color: rgba(203,134,15,0.20) !important; */
-background-color: rgba(203,134,15,0.20) !important;
+/* background-color: rgba(203,134,15,0.20) !important; */
+background-color: #0784BF !important;
+box-shadow: 0px 3px 2px black;
 }
 
 .navbar-brand {
-  color: black!important;
-  text-shadow: 1px 0 0px #F2AE27, 1px 0 3px #F2AE27;
+  color: #FFFFFF!important;
+  text-shadow: 0 0 1px #035175, 0 0 1px #035175;
   font-size: 2vw;
 }
 
 li a {
-  color: black !important;
-  text-shadow: 1px 0 0px #F2AE27, 1px 0 3px #F2AE27;
-  font-size: 2vw
+  color: #FFFFFF !important;
+  text-shadow: 0 0 1px #035175, 0 0 3px #035175;
+  font-size: 1.5vw;
 }
 
 
@@ -33,6 +35,11 @@ li a {
 
 
 /* VIDEO BG */
+/* video {
+  widows: 10px;
+  height: 100vh;
+} */
+
 .fullscreen-video-wrap {
   height: 100vh;
   width: 100vw;
@@ -42,17 +49,31 @@ li a {
   overflow: hidden;
 }
 
-.header-content {
+.header-overlay {
   width: 100%;
+  height: 100vh;
+  z-index: 4;
+  position: absolute;
+  background-color: rgba(196, 129, 0, 0.05);
+  top: 0;
+  left: 0;
+}
+
+.header-content {
+  margin-top: 10%;
+  width: 100%;
+  height: 80vh;
   z-index: 3;
   position: absolute;
-  top: 50%;
+  top: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
   color: black !important;
-  text-shadow: 1px 0 0px #F2AE27, 1px 0 3px #F2AE27;
+  /* text-shadow: 0.4px 0.4px 0 #035175, -0.4px -0.4px 0 #035175; */
+  overflow: hidden;
 
 }
 .header-content h4{
@@ -66,14 +87,68 @@ li a {
 
 
 .header-content a {
-  width: 20vw;
   align-self: center;
-  background-color: #CB860F;
+  /* background-color: #CB860F; */
   font-size: 3vw;
   color: black !important;
-  text-shadow: 0 0 1px #F2AE27, 0 0 1px #F2AE27;
-  font-size: 1.5vw
+  text-shadow: 0 0 0 #035175, -0 -0 0 #035175;
+  /* font-size: 1.5vw; */
+  border-radius: 50%;
+  position: relative;
+  /* top: 30%; */
 }
+
+.header-content blockquote {
+  /* width: 80%;
+  color: white;
+  transform: translatey(50%);
+  border-color: #FFFFFF; */
+  
+}
+
+/* blocquote */
+blockquote{
+  transform: translateY(40%);
+  transform: translateZ(20%);
+  display:block;
+  background: #fff;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  width: 90%;
+  /* position: relative; */
+  
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #666;
+  text-align: justify;
+  
+  /*Borders - (Optional)*/
+  border-left: 15px solid #c76c0c;
+  border-right: 2px solid #c76c0c;
+  
+  /*Box Shadow - (Optional)*/
+  -moz-box-shadow: 2px 2px 15px 000;
+  -webkit-box-shadow: 2px 2px 15px 000;
+  box-shadow: 2px 2px 15px #000;
+}
+
+
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+
+blockquote em{
+  font-style: italic;
+}
+/* blocquote */
+
+/* .header-content blockquote footer {
+  color: white;
+} */
 
 @media screen and (max-width: 600px) {
   li a {
@@ -83,24 +158,78 @@ li a {
     font-size: 23px;
   }
   .header-content a{
-    font-size: 3vw;
+    /* font-size: 2vw; */
+    top: 20%;
   }
   .header-content h4{
+    margin-top: 50px;
     padding: 0.5%;
-    font-size: 8vw;
+    font-size: 6vw;
   }
 
-  .header-content h5 {
-    font-size: 6vw;
+  /* .header-content h5 {
+    font-size: 5vw;
+  } */
+
+  .header-content {
+    justify-content: space-around;
   }
 }
 
 /* SECTIONS */
+
+/* .row {
+  display: flex;
+  justify-content: center !important;
+} */
 section {
   height: 100vh;
   overflow-y: hidden;
+  padding-top: 5%;
+  /* background-color:  #E5B74A; */
+  /* background-image: url("images/bluebg1.jpg"); */
+  color: black;
+  display: flex;
+  justify-content: center !important;
 }
 
 section h1, section h2, section h5 {
-  padding: 1%;
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+/* ABOUT */
+.about {
+  background-image: url("./images/bluebg1.jpg");
+  color: #FFFFFF;
+}
+
+.about h2 {
+  margin: 12% 0;
+}
+
+@media screen and (max-width: 900px) {
+  .about {
+    height: 100%;
+  }
+}
+/* FORMATION */
+
+.formation {
+  background-image: url("./images/bluebg2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.formation h2 {
+  margin: 10% 0;
+}
+/* CONTACT */
+
+.contact {
+  background-image: url("./images/bluebg3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
